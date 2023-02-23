@@ -1,0 +1,19 @@
+{
+    "name": "nasri/wp-splus",
+    "description": "Awesome starter...",
+    "type": "project",
+    "license": "GPL",
+    "autoload": {
+        "psr-4": {
+            "WP_SPlus_Inc\\": "./inc"
+        }
+    },
+    "authors": [
+        {
+            "name": "O.Nasri",
+            "email": "omid.nasri@outlook.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
