@@ -15,6 +15,7 @@ final class Init {
             Base\SettingsLink::class,
             Base\RegisterNewUser::class,
             Base\UpdateProfile::class,
+            Base\FinancialTransaction::class
         ];
     }
 

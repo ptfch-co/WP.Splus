@@ -24,7 +24,10 @@ class RegisterNewUser {
 
         if ( empty( $server_address) ) return;
 
-        $result = array();
+        $result = array(
+            'RequestFrom' => 'WordPress',
+            'RequestType' => 'RegisterNewUser'
+        );
 
         foreach( get_user_by('id', $user_id)  as $key => $details)
         {
@@ -48,7 +51,7 @@ class RegisterNewUser {
 
         $result['Request.Type'] = "New";
 
-        wp_remote_post( $server_address, array(
+        wp_remote_post( $server_address . '/api/v1/workflows/body/submit', array(
             'headers' => array('Content-Type' => 'application/json; charset=utf-8'),
             'body' => json_encode( $result )
         ));

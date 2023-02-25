@@ -14,7 +14,8 @@ class Activate {
         if ( ! get_option( 'wp-splus-server' ) ) 
         {
             update_option( 'wp-splus-server', array(
-                'server_address' => ''
+                'server_address' => '',
+                'default_financial_transactions_type_code' => ''
             ));
         }
 

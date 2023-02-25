@@ -21,7 +21,10 @@ class UpdateProfile
 
     function update_profile( $user_id )
     {
-        $result = array();
+        $result = array(
+            'RequestFrom' => 'WordPress',
+            'RequestType' => 'UpdateUserProfile'
+        );
 
         foreach( get_user_by('id', $user_id)  as $key => $details)
         {
@@ -50,6 +53,6 @@ class UpdateProfile
             'body' => json_encode( $result ),
         );
 
-        wp_remote_post( get_option( 'wp-splus-server' )[ 'server_address' ], $args );
+        wp_remote_post( get_option( 'wp-splus-server' )[ 'server_address' ] . '/api/v1/workflows/body/submit', $args );
     }
 }

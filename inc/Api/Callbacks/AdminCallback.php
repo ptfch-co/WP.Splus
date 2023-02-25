@@ -11,7 +11,7 @@ class AdminCallback {
     function server_address_field() {
 
         echo '<input type="text"
-                     placeholder="http(s)://server-address/api/v1/woocommerce/order/paymentcomplete"
+                     placeholder="http(s)://server-address"
                      name="wp-splus-server[server_address]" 
                      value="'. get_option( 'wp-splus-server' )["server_address"] .'" 
                      style="width: 27.7%; direction: ltr;" />';
@@ -45,5 +45,12 @@ class AdminCallback {
         echo '<input type="checkbox"
                      name="wp-splus-settings[pass_data_to_server_by_update_profile]" 
                      '. $value .' />';
+    }
+
+    function default_financial_transactions_type_code() {
+        $value = get_option('wp-splus-settings')["default_financial_transactions_type_code"];
+        echo '<input type="text"
+                     name="wp-splus-settings[default_financial_transactions_type_code]" 
+                     value="'. $value .'" />';
     }
 }

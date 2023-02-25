@@ -98,6 +98,14 @@ class Admin {
                 'page'     => 'wp-splus-settings',
                 'section'  => 'wp-splus-settings-section',
                 'args'     => array()
+            ),
+            array(
+                'id'       => 'default_financial_transactions_type_code',
+                'title'    => 'کلید تراکنش‌های مالی',
+                'callback' => array( $this -> callback, 'default_financial_transactions_type_code' ),
+                'page'     => 'wp-splus-settings',
+                'section'  => 'wp-splus-settings-section',
+                'args'     => array()
             )
         ));
     }
