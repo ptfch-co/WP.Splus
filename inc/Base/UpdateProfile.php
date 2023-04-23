@@ -22,8 +22,9 @@ class UpdateProfile
     function update_profile( $user_id )
     {
         $result = array(
-            'RequestFrom' => 'WordPress',
-            'RequestType' => 'UpdateUserProfile'
+            'RequestFrom'     => 'WordPress',
+            'RequestType'     => 'UpdateUserProfile',
+            'Key4Webserice' => get_option('wp-splus-settings')['key_4_webserice']
         );
 
         foreach( get_user_by('id', $user_id)  as $key => $details)

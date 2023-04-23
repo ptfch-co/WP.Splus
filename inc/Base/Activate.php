@@ -22,8 +22,9 @@ class Activate {
         if ( ! get_option( 'wp-splus-settings' ) ) 
         {
             update_option( 'wp-splus-settings', array(
-                'pass_data_to_server_by_user_register'  => '',
-                'pass_data_to_server_by_update_profile' => ''
+                'pass_data_to_server_by_user_register' => '',
+                'pass_data_to_server_by_update_profile' => '',
+                'Key_4_Webserice' => ''
             ));
         }
     }

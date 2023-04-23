@@ -53,4 +53,11 @@ class AdminCallback {
                      name="wp-splus-settings[default_financial_transactions_type_code]" 
                      value="'. $value .'" />';
     }
+
+    function key_4_webserice() {
+        $value = get_option('wp-splus-settings')["key_4_webserice"];
+        echo '<input type="text"
+                     name="wp-splus-settings[key_4_webserice]" 
+                     value="'. $value .'" />';
+    }
 }

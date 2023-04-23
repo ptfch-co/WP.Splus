@@ -34,8 +34,10 @@ class FinancialTransaction
                             <th class="woocommerce-orders-table__header"><span class="nobr">نوع</span></th>
                             <th class="woocommerce-orders-table__header"><span class="nobr">عنوان</span></th>
                             <th class="woocommerce-orders-table__header"><span class="nobr">شماره</span></th>
+                            <th class="woocommerce-orders-table__header"><span class="nobr">تاریخ</span></th>
                             <th class="woocommerce-orders-table__header"><span class="nobr">بدهکاری</span></th>
                             <th class="woocommerce-orders-table__header"><span class="nobr">بستانکاری</span></th>
+                            <th class="woocommerce-orders-table__header"><span class="nobr"></span></th>
                         </tr>
                     </thead>
 		            <tbody>
@@ -44,8 +46,14 @@ class FinancialTransaction
                                 <td class="woocommerce-orders-table__cell"><?php echo $item -> extendedProperties -> Type ?></td>
                                 <td class="woocommerce-orders-table__cell"><?php echo $item -> extendedProperties -> Subject ?></td>
                                 <td class="woocommerce-orders-table__cell"><?php echo $item -> extendedProperties -> Number ?></td>
+                                <td class="woocommerce-orders-table__cell"><?php echo $item -> createDatePersian ?></td>
                                 <td class="woocommerce-orders-table__cell"><?php echo $item -> extendedProperties -> Debit ?></td>
                                 <td class="woocommerce-orders-table__cell"><?php echo $item -> extendedProperties -> Credits ?></td>
+                                <td class="woocommerce-orders-table__cell">
+                                    <a <?php empty($item -> extendedProperties -> LinkPreview) ? 'disabled' : '' ?> href="<?php echo $item -> extendedProperties -> LinkPreview ?>">
+                                        پیش نمایش
+                                    </a>
+                                </td>
                             </tr>
                         <?php }?>
 					</tbody>

@@ -106,6 +106,14 @@ class Admin {
                 'page'     => 'wp-splus-settings',
                 'section'  => 'wp-splus-settings-section',
                 'args'     => array()
+            ),
+            array(
+                'id'       => 'key_4_webserice',
+                'title'    => 'کلید وب سرویس',
+                'callback' => array( $this -> callback, 'key_4_webserice' ),
+                'page'     => 'wp-splus-settings',
+                'section'  => 'wp-splus-settings-section',
+                'args'     => array()
             )
         ));
     }
