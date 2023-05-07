@@ -4,7 +4,7 @@
     Plugin Name: اتصال وب سایت وردپرس به پلتفرم سامری
     Plugin URI : https://crm-support.ir
     Description: افزونه‌ای جهت اتصال وب سایت وردپرسی به پلتفرم سامری.
-    Version    : 2.1.0
+    Version    : 2.1.1
     Author     : PTFCH
     Author URI : https://crm-support.ir
     License    : GPLv2 or later

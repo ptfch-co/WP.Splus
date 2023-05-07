@@ -46,7 +46,7 @@ class FinancialTransaction
                                 <td class="woocommerce-orders-table__cell"><?php echo $item -> extendedProperties -> Type ?></td>
                                 <td class="woocommerce-orders-table__cell"><?php echo $item -> extendedProperties -> Subject ?></td>
                                 <td class="woocommerce-orders-table__cell"><?php echo $item -> extendedProperties -> Number ?></td>
-                                <td class="woocommerce-orders-table__cell"><?php echo $item -> createDatePersian ?></td>
+                                <td class="woocommerce-orders-table__cell"><?php echo $item -> extendedProperties -> FinancialDate ?></td>
                                 <td class="woocommerce-orders-table__cell"><?php echo $item -> extendedProperties -> Debit ?></td>
                                 <td class="woocommerce-orders-table__cell"><?php echo $item -> extendedProperties -> Credits ?></td>
                                 <td class="woocommerce-orders-table__cell">
