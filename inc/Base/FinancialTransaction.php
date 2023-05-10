@@ -41,7 +41,16 @@ class FinancialTransaction
                         </tr>
                     </thead>
 		            <tbody>
-						<?php foreach (json_decode($response['body']) as $item) {?>
+						<?php
+                            $data = json_decode($response['body']);
+                            if (!empty($data)) {
+                                usort($data, function ($a, $b)
+                                {
+                                    return strcmp($b -> extendedProperties -> FinancialDate, 
+                                        $a -> extendedProperties -> FinancialDate);
+                                });
+                            }
+                            foreach ($data as $item) {?>
                             <tr class="woocommerce-orders-table__row">
                                 <td class="woocommerce-orders-table__cell"><?php echo $item -> extendedProperties -> Type ?></td>
                                 <td class="woocommerce-orders-table__cell"><?php echo $item -> extendedProperties -> Subject ?></td>
