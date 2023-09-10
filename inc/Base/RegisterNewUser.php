@@ -26,7 +26,8 @@ class RegisterNewUser {
 
         $result = array(
             'RequestFrom' => 'WordPress',
-            'RequestType' => 'RegisterNewUser'
+            'RequestType' => 'RegisterNewUser',
+            'Key4Webserice' => get_option('wp-splus-settings')['key_4_webserice']
         );
 
         foreach( get_user_by('id', $user_id)  as $key => $details)
